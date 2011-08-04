@@ -15,10 +15,6 @@ Base64 encode and decode UTF-8 strings for node.js
       console.log(base64.decode(encoded));
       > node.js
 
-### Report a bug
-
-If you want to contribute with a test case please file an [issue][2].
-
 ## Meta
 
 * Code: `git clone git://github.com/dscape/b64.git`
