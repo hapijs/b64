@@ -17,7 +17,7 @@ Base64 encode and decode UTF-8 strings for node.js
 
 ### Report a bug
 
-If you want to contribute with a test case please file a [issue][2].
+If you want to contribute with a test case please file an [issue][2].
 
 ## Meta
 
