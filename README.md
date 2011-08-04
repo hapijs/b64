@@ -25,5 +25,9 @@ If you want to contribute with a test case please file an [issue][2].
 * Home: <http://github.com/dscape/b64>
 * Bugs: <http://github.com/dscape/b64/issues>
 
+(oO)--',- in [caos][3]
+
 [1]: http://npmjs.org
 [2]: http://github.com/dscape/b64/issues
+[3]: http://caos.di.uminho.pt/
+
