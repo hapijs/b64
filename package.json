@@ -2,7 +2,7 @@
 , "description": "Base64 encode and decode UTF-8 strings"
 , "name": "b64"
 , "tags": ["base64", "encode", "decode", "base 64", "string"]
-, "version": "1.0.0"
+, "version": "1.0.1"
 , "repository": { "type": "git", "url": "http://github.com/dscape/b64.git" }
-, "engines": { "node": "~v0.4.8" }
+, "engines": { "node": ">=v0.4.8" }
 }
