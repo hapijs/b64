@@ -4,5 +4,6 @@
 , "tags": ["base64", "encode", "decode", "base 64", "string"]
 , "version": "1.0.1"
 , "repository": { "type": "git", "url": "http://github.com/dscape/b64.git" }
+, "main": "index.js"
 , "engines": { "node": ">=v0.4.8" }
 }
