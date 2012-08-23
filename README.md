@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/dscape/b64.png)](http://travis-ci.org/dscape/b64)
 ## B64
 
 Base64 encode and decode UTF-8 strings for node.js
