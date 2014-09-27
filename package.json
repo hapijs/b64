@@ -1,8 +1,32 @@
-{ "author": "Nuno Job <nunojobpinto@gmail.com> [http://nunojob.com]"
-, "description": "Base64 encode and decode UTF-8 strings"
-, "name": "b64"
-, "tags": ["base64", "encode", "decode", "base 64", "string"]
-, "version": "1.0.1"
-, "repository": { "type": "git", "url": "http://github.com/dscape/b64.git" }
-, "engines": { "node": ">=v0.4.8" }
+{
+  "name": "b64",
+  "description": "Base64 streaming encoder and decoder",
+  "version": "2.0.0",
+  "repository": "git://github.com/hapijs/b64",
+  "main": "index",
+  "keywords": [
+    "buffer",
+    "base64",
+    "decode",
+    "encode",
+    "stream"
+  ],
+  "engines": {
+    "node": ">=0.10.32"
+  },
+  "dependencies": {
+    "hoek": "2.x.x"
+  },
+  "devDependencies": {
+    "lab": "4.x.x"
+  },
+  "scripts": {
+    "test": "make test-cov"
+  },
+  "licenses": [
+    {
+      "type": "BSD",
+      "url": "http://github.com/hapijs/b64/raw/master/LICENSE"
+    }
+  ]
 }
