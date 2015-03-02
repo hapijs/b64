@@ -3,6 +3,7 @@
 var Crypto = require('crypto');
 var Stream = require('stream');
 var B64 = require('..');
+var Code = require('code');
 var Hoek = require('hoek');
 var Lab = require('lab');
 var Wreck = require('wreck');
@@ -18,7 +19,7 @@ var internals = {};
 var lab = exports.lab = Lab.script();
 var describe = lab.describe;
 var it = lab.it;
-var expect = Lab.expect;
+var expect = Code.expect;
 
 
 it('pipes buffer through encoder and decoder', function (done) {
