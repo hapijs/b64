@@ -1,9 +1,9 @@
 {
   "name": "b64",
   "description": "Base64 streaming encoder and decoder",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "repository": "git://github.com/hapijs/b64",
-  "main": "index",
+  "main": "lib/index.js",
   "keywords": [
     "buffer",
     "base64",
@@ -23,12 +23,8 @@
     "wreck": "5.x.x"
   },
   "scripts": {
-    "test": "make test-cov"
+    "test": "lab -a code -t 100 -L",
+    "test-cov-html": "lab -a code -r html -o coverage.html"
   },
-  "licenses": [
-    {
-      "type": "BSD",
-      "url": "http://github.com/hapijs/b64/raw/master/LICENSE"
-    }
-  ]
+  "license": "BSD-3-Clause"
 }

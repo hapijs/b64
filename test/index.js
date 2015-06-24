@@ -27,7 +27,7 @@ it('pipes buffer through encoder and decoder', function (done) {
     var buffer = Crypto.randomBytes(1024);
     internals.test(buffer, function (err, payload) {
 
-        expect(err).to.not.exist;
+        expect(err).to.not.exist();
         expect(payload).to.equal(buffer.toString());
         done();
     });
@@ -85,7 +85,7 @@ describe('Encoder', function () {
         var buffer = [Crypto.randomBytes(5), Crypto.randomBytes(5), Crypto.randomBytes(5), Crypto.randomBytes(5)];
         internals.test(buffer, function (err, payload) {
 
-            expect(err).to.not.exist;
+            expect(err).to.not.exist();
             expect(payload).to.equal(Buffer.concat(buffer).toString());
             done();
         });
@@ -96,7 +96,7 @@ describe('Encoder', function () {
         var buffer = [Crypto.randomBytes(5), Crypto.randomBytes(5), Crypto.randomBytes(5), Crypto.randomBytes(1)];
         internals.test(buffer, function (err, payload) {
 
-            expect(err).to.not.exist;
+            expect(err).to.not.exist();
             expect(payload).to.equal(Buffer.concat(buffer).toString());
             done();
         });
@@ -107,7 +107,7 @@ describe('Encoder', function () {
         var buffer = [Crypto.randomBytes(5), Crypto.randomBytes(5), Crypto.randomBytes(5), Crypto.randomBytes(3)];
         internals.test(buffer, function (err, payload) {
 
-            expect(err).to.not.exist;
+            expect(err).to.not.exist();
             expect(payload).to.equal(Buffer.concat(buffer).toString());
             done();
         });
@@ -127,7 +127,7 @@ describe('Decoder', function () {
 
         Wreck.read(source, {}, function (err, payload) {
 
-            expect(err).to.not.exist;
+            expect(err).to.not.exist();
             expect(payload.toString()).to.equal(value.toString());
             done();
         });
@@ -143,7 +143,7 @@ describe('Decoder', function () {
 
         Wreck.read(source, {}, function (err, payload) {
 
-            expect(err).to.not.exist;
+            expect(err).to.not.exist();
             expect(payload.toString()).to.equal(value.toString());
             done();
         });
