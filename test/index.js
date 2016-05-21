@@ -4,11 +4,11 @@
 
 const Crypto = require('crypto');
 const Stream = require('stream');
-const B64 = require('..');
+const Util = require('util');
 const Code = require('code');
-const Hoek = require('hoek');
 const Lab = require('lab');
 const Wreck = require('wreck');
+const B64 = require('..');
 
 
 // Declare internals
@@ -161,7 +161,7 @@ internals.Payload = function (payload) {
     this._position = 0;
 };
 
-Hoek.inherits(internals.Payload, Stream.Readable);
+Util.inherits(internals.Payload, Stream.Readable);
 
 
 internals.Payload.prototype._read = function (size) {
