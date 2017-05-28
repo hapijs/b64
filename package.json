@@ -16,9 +16,9 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "code": "3.x.x",
-    "lab": "10.x.x",
-    "wreck": "8.x.x"
+    "code": "4.x.x",
+    "lab": "13.x.x",
+    "wreck": "12.x.x"
   },
   "scripts": {
     "test": "lab -a code -t 100 -L",
