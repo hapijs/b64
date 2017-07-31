@@ -5,7 +5,6 @@
 const Crypto = require('crypto');
 const Stream = require('stream');
 const Util = require('util');
-const Code = require('code');
 const Lab = require('lab');
 const Wreck = require('wreck');
 const B64 = require('..');
@@ -21,7 +20,7 @@ const internals = {};
 const lab = exports.lab = Lab.script();
 const describe = lab.describe;
 const it = lab.it;
-const expect = Code.expect;
+const expect = Lab.expect;
 
 
 it('pipes buffer through encoder and decoder', (done) => {
