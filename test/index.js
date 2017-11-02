@@ -6,9 +6,10 @@ const Crypto = require('crypto');
 const Stream = require('stream');
 const Util = require('util');
 
+const B64 = require('..');
+const Code = require('code');
 const Lab = require('lab');
 const Wreck = require('wreck');
-const B64 = require('..');
 
 
 // Declare internals
@@ -18,10 +19,8 @@ const internals = {};
 
 // Test shortcuts
 
-const lab = exports.lab = Lab.script();
-const describe = lab.describe;
-const it = lab.it;
-const expect = Lab.expect;
+const { describe, it } = exports.lab = Lab.script();
+const expect = Code.expect;
 
 
 it('pipes buffer through encoder and decoder', async () => {
@@ -34,35 +33,35 @@ it('pipes buffer through encoder and decoder', async () => {
 
 describe('decode()', () => {
 
-    it('decodes a short buffer (1)', async () => {
+    it('decodes a short buffer (1)', () => {
 
         const value = '0';
         const encoded = B64.encode(new Buffer(value));
         expect(B64.decode(encoded).toString()).to.equal(value);
     });
 
-    it('decodes an incomplete buffer', async () => {
+    it('decodes an incomplete buffer', () => {
 
         const value = '';
         const encoded = new Buffer('A');
         expect(B64.decode(encoded).toString()).to.equal(value);
     });
 
-    it('decodes an whitespace buffer', async () => {
+    it('decodes an whitespace buffer', () => {
 
         const value = '';
         const encoded = new Buffer('     ');
         expect(B64.decode(encoded).toString()).to.equal(value);
     });
 
-    it('decodes a buffer with whitespace', async () => {
+    it('decodes a buffer with whitespace', () => {
 
         const value = '0123456789';
         const encoded = new Buffer('M  D\nEy\tMz\r\nQ1Nj\rc4\r\nO Q ==');
         expect(B64.decode(encoded).toString()).to.equal(value);
     });
 
-    it('decodes a buffer with 4th invalid character', async () => {
+    it('decodes a buffer with 4th invalid character', () => {
 
         const value = '01';
         const encoded = new Buffer('MDE$');
