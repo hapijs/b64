@@ -60,3 +60,11 @@ const decoder = new B64.Decoder();
 
 stream.pipe(decoder).pipe(process.stdout);
 ```
+
+### base64urlEncode(value)
+
+Encodes value of string or buffer type in Base64 or URL encoding, function will assert input value is correct.
+
+### base64urlDecode(value)
+
+Decodes string into Base64 or URL encoding, function throws an error on invalid input and returns a string or buffer depending on encoding provided.  Default encoding is binary.
