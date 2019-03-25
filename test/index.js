@@ -1,21 +1,16 @@
 'use strict';
 
-// Load modules
-
 const Crypto = require('crypto');
 const Stream = require('stream');
 const Util = require('util');
+
 const Lab = require('lab');
-const Wreck = require('wreck');
+const Wreck = require('@commercial/wreck');
 const B64 = require('..');
 
 
-// Declare internals
-
 const internals = {};
 
-
-// Test shortcuts
 
 const lab = exports.lab = Lab.script();
 const describe = lab.describe;
@@ -40,7 +35,7 @@ describe('decode()', () => {
     it('decodes a short buffer (1)', (done) => {
 
         const value = '0';
-        const encoded = B64.encode(new Buffer(value));
+        const encoded = B64.encode(Buffer.from(value));
         expect(B64.decode(encoded).toString()).to.equal(value);
         done();
     });
@@ -48,7 +43,7 @@ describe('decode()', () => {
     it('decodes an incomplete buffer', (done) => {
 
         const value = '';
-        const encoded = new Buffer('A');
+        const encoded = Buffer.from('A');
         expect(B64.decode(encoded).toString()).to.equal(value);
         done();
     });
@@ -56,7 +51,7 @@ describe('decode()', () => {
     it('decodes an whitespace buffer', (done) => {
 
         const value = '';
-        const encoded = new Buffer('     ');
+        const encoded = Buffer.from('     ');
         expect(B64.decode(encoded).toString()).to.equal(value);
         done();
     });
@@ -64,7 +59,7 @@ describe('decode()', () => {
     it('decodes a buffer with whitespace', (done) => {
 
         const value = '0123456789';
-        const encoded = new Buffer('M  D\nEy\tMz\r\nQ1Nj\rc4\r\nO Q ==');
+        const encoded = Buffer.from('M  D\nEy\tMz\r\nQ1Nj\rc4\r\nO Q ==');
         expect(B64.decode(encoded).toString()).to.equal(value);
         done();
     });
@@ -72,7 +67,7 @@ describe('decode()', () => {
     it('decodes a buffer with 4th invalid character', (done) => {
 
         const value = '01';
-        const encoded = new Buffer('MDE$');
+        const encoded = Buffer.from('MDE$');
         expect(B64.decode(encoded).toString()).to.equal(value);
         done();
     });
@@ -137,7 +132,7 @@ describe('Decoder', () => {
     it('flushes remainder', (done) => {
 
         const value = '0123456789';
-        const encoded = B64.encode(new Buffer(value));         // MDEyMzQ1Njc4OQ==
+        const encoded = B64.encode(Buffer.from(value));         // MDEyMzQ1Njc4OQ==
 
         const stream = new internals.Payload([encoded.slice(0, 14)]);
         const source = stream.pipe(new B64.Decoder());
