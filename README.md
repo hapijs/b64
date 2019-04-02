@@ -34,7 +34,7 @@ Example:
 'use strict';
 
 const Fs = require('fs');
-const B64 = require('b64');
+const B64 = require('@hapi/b64');
 
 const stream = Fs.createReadStream(`${__dirname}/package.json`);
 const encoder = new B64.Encoder();
@@ -53,7 +53,7 @@ Example:
 'use strict';
 
 const Fs = require('fs');
-const B64 = require('b64');
+const B64 = require('@hapi/b64');
 
 const stream = Fs.createReadStream(`${__dirname}/encodedfile.b64`);
 const decoder = new B64.Decoder();
