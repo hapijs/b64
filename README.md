@@ -4,7 +4,7 @@
 
 Base64 streaming encoder and decoder
 
-[![Build Status](https://secure.travis-ci.org/hapijs/b64.png)](http://travis-ci.org/hapijs/b64) [![Greenkeeper badge](https://badges.greenkeeper.io/hapijs/b64.svg)](https://greenkeeper.io/)
+[![Build Status](https://secure.travis-ci.org/hapijs/b64.png)](http://travis-ci.org/hapijs/b64)
 
 ## Installation
 
