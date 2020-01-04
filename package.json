@@ -4,6 +4,9 @@
   "version": "4.2.1",
   "repository": "git://github.com/hapijs/b64",
   "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
   "keywords": [
     "buffer",
     "base64",
@@ -12,12 +15,12 @@
     "stream"
   ],
   "dependencies": {
-    "@hapi/hoek": "8.x.x"
+    "@hapi/hoek": "9.x.x"
   },
   "devDependencies": {
-    "@hapi/code": "6.x.x",
-    "@hapi/lab": "20.x.x",
-    "@hapi/wreck": "15.x.x"
+    "@hapi/code": "8.x.x",
+    "@hapi/lab": "22.x.x",
+    "@hapi/wreck": "17.x.x"
   },
   "scripts": {
     "test": "lab -a @hapi/code -t 100 -L",
