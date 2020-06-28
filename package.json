@@ -3,6 +3,9 @@
   "description": "Base64 streaming encoder and decoder",
   "version": "3.1.0",
   "repository": "git://github.com/hapijs/b64",
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "main": "lib/index.js",
   "keywords": [
     "buffer",
