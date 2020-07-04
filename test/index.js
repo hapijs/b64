@@ -9,7 +9,7 @@ const Util = require('util');
 const B64 = require('..');
 const Code = require('@hapi/code');
 const Lab = require('@hapi/lab');
-const Wreck = require('@hapi/wreck');
+const Wreck = require('@commercial/wreck');
 
 
 const internals = {};
