@@ -14,11 +14,17 @@
     "encode",
     "stream"
   ],
+  "eslintConfig": {
+    "extends": [
+      "plugin:@hapi/module"
+    ]
+  },
   "dependencies": {
     "@hapi/hoek": "9.x.x"
   },
   "devDependencies": {
     "@hapi/code": "8.x.x",
+    "@hapi/eslint-plugin": "*",
     "@hapi/lab": "24.x.x",
     "@hapi/wreck": "17.x.x"
   },
