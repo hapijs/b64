@@ -1,7 +1,7 @@
 {
   "name": "b64",
   "description": "Base64 streaming encoder and decoder",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "repository": "git://github.com/hapijs/b64",
   "engines": {
     "node": ">=6.0.0"
