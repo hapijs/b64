@@ -5,7 +5,7 @@ const Stream = require('stream');
 const Util = require('util');
 
 const Lab = require('lab');
-const Wreck = require('@commercial/wreck');
+const Wreck = require('wreck');
 const B64 = require('..');
 
 
