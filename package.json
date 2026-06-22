@@ -2,7 +2,7 @@
   "name": "@hapi/b64",
   "description": "Base64 streaming encoder and decoder",
   "version": "6.0.1",
-  "repository": "git://github.com/hapijs/b64",
+  "repository": "https://github.com/hapijs/b64",
   "main": "lib/index.js",
   "files": [
     "lib"
