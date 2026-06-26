@@ -1,13 +1,10 @@
-
 ### encode(buffer)
 
 Base64 encode the buffer and return it as a new Buffer.
 
-
 ### decode(buffer)
 
 Base64 decode the buffer and return the result as a new buffer.
-
 
 ### Encoder
 
@@ -26,7 +23,6 @@ const encoder = new B64.Encoder();
 
 stream.pipe(encoder).pipe(process.stdout);
 ```
-
 
 ### Decoder
 
@@ -52,4 +48,4 @@ Encodes value of string or buffer type in Base64 or URL encoding, function will 
 
 ### base64urlDecode(value)
 
-Decodes string into Base64 or URL encoding, function throws an error on invalid input and returns a string or buffer depending on encoding provided.  Default encoding is binary.
+Decodes string into Base64 or URL encoding, function throws an error on invalid input and returns a string or buffer depending on encoding provided. Default encoding is binary.

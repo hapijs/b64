@@ -1,36 +1,52 @@
 {
-  "name": "@hapi/b64",
-  "description": "Base64 streaming encoder and decoder",
-  "version": "6.0.1",
-  "repository": "git://github.com/hapijs/b64",
-  "main": "lib/index.js",
-  "files": [
-    "lib"
-  ],
-  "keywords": [
-    "buffer",
-    "base64",
-    "decode",
-    "encode",
-    "stream"
-  ],
-  "eslintConfig": {
-    "extends": [
-      "plugin:@hapi/module"
-    ]
-  },
-  "dependencies": {
-    "@hapi/hoek": "^11.0.2"
-  },
-  "devDependencies": {
-    "@hapi/code": "^9.0.0",
-    "@hapi/eslint-plugin": "^6.0.0",
-    "@hapi/lab": "^25.0.1",
-    "@hapi/wreck": "^18.0.0"
-  },
-  "scripts": {
-    "test": "lab -a @hapi/code -t 100 -L",
-    "test-cov-html": "lab -a @hapi/code -r html -o coverage.html"
-  },
-  "license": "BSD-3-Clause"
+    "name": "@hapi/b64",
+    "version": "6.0.1",
+    "description": "Base64 streaming encoder and decoder",
+    "keywords": [
+        "base64",
+        "buffer",
+        "decode",
+        "encode",
+        "stream"
+    ],
+    "license": "BSD-3-Clause",
+    "repository": "git://github.com/hapijs/b64",
+    "files": [
+        "lib",
+        "API.md",
+        "README.md"
+    ],
+    "type": "module",
+    "types": "lib/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./lib/index.d.ts",
+            "default": "./lib/index.js"
+        }
+    },
+    "scripts": {
+        "test": "vitest run --coverage",
+        "typecheck": "tsc --noEmit",
+        "lint": "oxlint",
+        "lint:fix": "oxlint --fix",
+        "fmt": "oxfmt --check",
+        "fmt:fix": "oxfmt",
+        "check": "npm run lint && npm run fmt && npm run typecheck && npm test"
+    },
+    "dependencies": {
+        "@hapi/hoek": "github:damusix/hoek#wip/ts"
+    },
+    "devDependencies": {
+        "@hapi/oxc-plugin": "^1.0.1",
+        "@hapi/wreck": "^18.0.0",
+        "@types/node": "^22.19.20",
+        "@vitest/coverage-v8": "^4.1.9",
+        "oxfmt": "^0.55.0",
+        "oxlint": "^1.70.0",
+        "typescript": "^6.0.3",
+        "vitest": "^4.1.9"
+    },
+    "engines": {
+        "node": ">=22"
+    }
 }
