@@ -1,7 +1,7 @@
 import * as Hoek from '@hapi/hoek';
 
-export { decode, Decoder } from './decoder.js';
-export { encode, Encoder } from './encoder.js';
+export { decode, Decoder } from './decoder.mjs';
+export { encode, Encoder } from './encoder.mjs';
 
 // Base64url (RFC 4648) encode
 

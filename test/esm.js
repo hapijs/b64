@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import * as B64 from '../lib/index.js';
+import * as B64 from '../src/index.mjs';
 
 describe('import()', () => {
     it('exposes all methods and classes as named imports', () => {

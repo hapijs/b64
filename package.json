@@ -12,16 +12,16 @@
     "license": "BSD-3-Clause",
     "repository": "git://github.com/hapijs/b64",
     "files": [
-        "lib",
+        "src",
         "API.md",
         "README.md"
     ],
     "type": "module",
-    "types": "lib/index.d.ts",
+    "types": "src/index.d.mts",
     "exports": {
         ".": {
-            "types": "./lib/index.d.ts",
-            "default": "./lib/index.js"
+            "types": "./src/index.d.mts",
+            "default": "./src/index.mjs"
         }
     },
     "scripts": {
