@@ -25,7 +25,7 @@ export function decode(buffer) {
     let c4;
     let j = 0;
 
-    for (let i = 0; i < len; ) {
+    for (let i = 0; i < len;) {
         do {
             c1 = decodeChars[buffer[i++] & 0xff];
         } while (i < len && c1 === -1);

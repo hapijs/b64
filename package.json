@@ -34,17 +34,17 @@
         "check": "npm run lint && npm run fmt && npm run typecheck && npm test"
     },
     "dependencies": {
-        "@hapi/hoek": "github:damusix/hoek#wip/ts"
+        "@hapi/hoek": "^12.0.0-rc.0"
     },
     "devDependencies": {
-        "@hapi/oxc-plugin": "^1.0.1",
+        "@hapi/oxc-plugin": "^1.0.4",
         "@hapi/wreck": "^18.0.0",
         "@types/node": "^22.19.20",
         "@vitest/coverage-v8": "^4.1.9",
-        "oxfmt": "^0.55.0",
-        "oxlint": "^1.70.0",
+        "oxfmt": "^0.61.0",
+        "oxlint": "^1.76.0",
         "typescript": "^6.0.3",
-        "vitest": "^4.1.9"
+        "vitest": "^4.1.10"
     },
     "engines": {
         "node": ">=22"
