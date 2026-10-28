@@ -36,12 +36,12 @@
         "@hapi/hoek": "^12.0.0-rc.0"
     },
     "devDependencies": {
-        "@hapi/oxc-plugin": "^1.0.4",
+        "@hapi/oxc-plugin": "^1.1.1",
         "@hapi/wreck": "^18.0.0",
         "@types/node": "^22.19.20",
         "@vitest/coverage-v8": "^4.1.9",
-        "oxfmt": "^0.61.0",
-        "oxlint": "^1.76.0",
+        "oxfmt": "^0.75.0",
+        "oxlint": "^1.90.0",
         "typescript": "^6.0.3",
         "vitest": "^4.1.10"
     },
