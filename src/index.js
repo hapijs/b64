@@ -8,7 +8,7 @@ export { encode, Encoder } from './encoder.js';
 export function base64urlEncode(value, encoding) {
     Hoek.assert(typeof value === 'string' || Buffer.isBuffer(value), 'value must be string or buffer');
     const buf = Buffer.isBuffer(value) ? value : Buffer.from(value, encoding || 'binary');
-    return buf.toString('base64').replace(/\+/g, '-').replace(/\//g, '_').replace(/=/g, '');
+    return buf.toString('base64url');
 }
 
 // Base64url (RFC 4648) decode
@@ -22,6 +22,6 @@ export function base64urlDecode(value, encoding) {
         throw new Error('Invalid character');
     }
 
-    const buf = Buffer.from(value, 'base64');
+    const buf = Buffer.from(value, 'base64url');
     return encoding === 'buffer' ? buf : buf.toString(encoding || 'binary');
 }
