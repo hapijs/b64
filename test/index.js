@@ -7,7 +7,7 @@ import Util from 'util';
 import * as Wreck from '@hapi/wreck';
 import { describe, expect, it } from 'vitest';
 
-import * as B64 from '../src/index.mjs';
+import * as B64 from '../src/index.js';
 
 const internals = {};
 
