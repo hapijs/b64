@@ -28,13 +28,22 @@ export function encode(buffer: Buffer): Buffer;
 export function base64urlEncode(value: string | Buffer, encoding?: BufferEncoding): string;
 
 /**
+ * Base64url (RFC 4648) decodes a string into a buffer.
+ *
+ * @param value - The base64url-encoded string.
+ * @param encoding - `'buffer'` to return a buffer.
+ * @returns The decoded buffer.
+ */
+export function base64urlDecode(value: string, encoding: 'buffer'): Buffer;
+
+/**
  * Base64url (RFC 4648) decodes a string.
  *
  * @param value - The base64url-encoded string.
- * @param encoding - The output encoding, or `'buffer'` to return a buffer. Defaults to `'binary'`.
- * @returns The decoded string, or a buffer when `encoding` is `'buffer'`.
+ * @param encoding - The output encoding. Defaults to `'binary'`.
+ * @returns The decoded string.
  */
-export function base64urlDecode(value: string, encoding?: BufferEncoding | 'buffer'): string | Buffer;
+export function base64urlDecode(value: string, encoding?: BufferEncoding): string;
 
 /** A streaming base64 decoder (a `stream.Transform`). */
 export class Decoder extends Transform {}
