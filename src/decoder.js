@@ -46,8 +46,7 @@ export function decode(buffer) {
 
         do {
             c3 = buffer[i++] & 0xff;
-            if (c3 === 61) {
-                // =
+            if (c3 === 61 /* = */) {
                 return result.slice(0, j);
             }
 
@@ -62,8 +61,7 @@ export function decode(buffer) {
 
         do {
             c4 = buffer[i++] & 0xff;
-            if (c4 === 61) {
-                // =
+            if (c4 === 61 /* = */) {
                 return result.slice(0, j);
             }
 
